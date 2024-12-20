@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #fce4ec;
+            color: #880e4f;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .balloons {
+            margin-top: 20px;
+            animation: float 2s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        button {
+            background-color: #ec407a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Happy Birthday! 🎂</h1>
+    <p>ขอให้วันนี้เต็มไปด้วยความสุขและรอยยิ้ม!</p>
+    <img src="https://i.imgur.com/OZaTzgr.png" alt="Balloon" class="balloons" width="150">
+    <img src="https://i.imgur.com/OZaTzgr.png" alt="Balloon" class="balloons" width="150">
+    <button onclick="showSurprise()">คลิกเพื่อรับคำอวยพร</button>
+    <p id="message" style="margin-top: 20px; font-size: 1.2em; display: none;"></p>
+
+    <script>
+        function showSurprise() {
+            const message = "สุขสันต์วันเกิด! ขอให้มีสุขภาพแข็งแรง ประสบความสำเร็จในทุกสิ่งที่ทำ 🎁🎉";
+            const messageElement = document.getElementById("message");
+            messageElement.textContent = message;
+            messageElement.style.display = "block";
+        }
+    </script>
+</body>
+</html>
